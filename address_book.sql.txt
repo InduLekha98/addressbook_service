@@ -1,26 +1,27 @@
-mysql> SHOW DATABASES;
-+--------------------+
-| Database           |
-+--------------------+
-| information_schema |
-| mysql              |
-| payroll_service    |
-| performance_schema |
-| sakila             |
-| sys                |
-| world              |
-+--------------------+
-7 rows in set (0.04 sec)
+mysql> CREATE TABLE address_book
+    -> (
+    -> firstName  VARCHAR(150) NOT NULL,
+    -> lastName   VARCHAR(150) NOT NULL,
+    -> address     VARCHAR(150) NOT NULL,
+    -> city        CHAR(150) NOT NULL,
+    -> state       VARCHAR(150) NOT NULL,
+    -> zip         Double NOT NULL,
+    -> phoneNo    Double NOT NULL,
+    -> email       VARCHAR(150) NOT NULL
+    -> );
+Query OK, 0 rows affected (1.62 sec)
 
-mysql> CREATE DATABASE addressBook_service;
-Query OK, 1 row affected (0.10 sec)
-
-mysql> USE addressBook_service;
-Database changed
-mysql> SELECT DATABASE();
-+---------------------+
-| DATABASE()          |
-+---------------------+
-| addressbook_service |
-+---------------------+
-1 row in set (0.00 sec)
+mysql> DESCRIBE address_book;
++-----------+--------------+------+-----+---------+-------+
+| Field     | Type         | Null | Key | Default | Extra |
++-----------+--------------+------+-----+---------+-------+
+| firstName | varchar(150) | NO   |     | NULL    |       |
+| lastName  | varchar(150) | NO   |     | NULL    |       |
+| address   | varchar(150) | NO   |     | NULL    |       |
+| city      | char(150)    | NO   |     | NULL    |       |
+| state     | varchar(150) | NO   |     | NULL    |       |
+| zip       | double       | NO   |     | NULL    |       |
+| phoneNo   | double       | NO   |     | NULL    |       |
+| email     | varchar(150) | NO   |     | NULL    |       |
++-----------+--------------+------+-----+---------+-------+
+8 rows in set (0.04 sec)
