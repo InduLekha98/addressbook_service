@@ -1,15 +1,15 @@
-mysql> SELECT city FROM address_book WHERE firstName = 'Naina';
-+-------+
-| city  |
-+-------+
-| Delhi |
-+-------+
+mysql> SELECT count(city) FROM address_book ;
++-------------+
+| count(city) |
++-------------+
+|           3 |
++-------------+
 1 row in set (0.00 sec)
 
-mysql> SELECT state FROM address_book WHERE firstName = 'Indu';
-+-----------+
-| state     |
-+-----------+
-| Telangana |
-+-----------+
+mysql> SELECT count(state) FROM address_book ;
++--------------+
+| count(state) |
++--------------+
+|            3 |
++--------------+
 1 row in set (0.00 sec)
