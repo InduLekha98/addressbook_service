@@ -1,12 +1,15 @@
+mysql> SELECT city FROM address_book WHERE firstName = 'Naina';
++-------+
+| city  |
++-------+
+| Delhi |
++-------+
+1 row in set (0.00 sec)
 
-mysql> DELETE FROM address_book WHERE firstName = 'Naina';
-Query OK, 1 row affected (0.08 sec)
-
-mysql> SELECT * FROM address_book;
-+-----------+----------+---------+-----------+-----------+--------+------------+----------------+
-| firstName | lastName | address | city      | state     | zip    | phoneNo    | email          |
-+-----------+----------+---------+-----------+-----------+--------+------------+----------------+
-| Indu      | Lekha    | xyz     | Hyderabad | Telangana | 500032 | 7864532190 | indu@gmail.com |
-| Bill      | Mark     | qrs     | Aizwal    | Mizoram   | 656770 | 6780457881 | bill@gmail.com |
-+-----------+----------+---------+-----------+-----------+--------+------------+----------------+
-2 rows in set (0.00 sec)
+mysql> SELECT state FROM address_book WHERE firstName = 'Indu';
++-----------+
+| state     |
++-----------+
+| Telangana |
++-----------+
+1 row in set (0.00 sec)
