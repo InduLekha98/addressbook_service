@@ -1,13 +1,7 @@
-mysql> ALTER TABLE address_book ADD type CHAR(10) AFTER lastName;
-Query OK, 0 rows affected (2.07 sec)
-Records: 0  Duplicates: 0  Warnings: 0
-
-mysql> SELECT * FROM address_book;
-+-----------+----------+------+---------+-----------+-----------+--------+------------+-----------------+
-| firstName | lastName | type | address | city      | state     | zip    | phoneNo    | email           |
-+-----------+----------+------+---------+-----------+-----------+--------+------------+-----------------+
-| Indu      | Lekha    | NULL | xyz     | Hyderabad | Telangana | 500032 | 7864532190 | indu@gmail.com  |
-| Bill      | Mark     | NULL | qrs     | Aizwal    | Mizoram   | 656770 | 6780457881 | bill@gmail.com  |
-| Naina     | Sing     | NULL | abc     | Delhi     | Delhi     | 768321 | 2637978230 | Naina@gmail.com |
-+-----------+----------+------+---------+-----------+-----------+--------+------------+-----------------+
-3 rows in set (0.00 sec)
+mysql> SELECT count(firstName) FROM address_book WHERE Type = 'Family' OR Type = 'Friends' OR Type = 'Profession';
++------------------+
+| count(firstName) |
++------------------+
+|                3 |
++------------------+
+1 row in set (0.00 sec)
